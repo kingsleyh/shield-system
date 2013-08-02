@@ -2,7 +2,7 @@
 
 Shield-System lets you generate github style status images for use anywhere e.g. custom badges with tests results.
 
-[![Build Status](https://travis-ci.org/masterthought/thundercat.png?branch=master)](https://travis-ci.org/masterthought/thundercat)
+[![Build Status](https://travis-ci.org/masterthought/shield-system.png?branch=master)](https://travis-ci.org/masterthought/shield-system)
 
 ## Background
 
