@@ -1,8 +1,8 @@
 class VerifyImage
 
   def self.is_same(actual,expected)
-    result = `compare -metric MAE #{actual} #{expected} null: 2>&1`
-    result == "0 (0)\n"
+    compare = `compare -metric rmse -subimage-search #{actual} #{expected} null: 2>&1`
+    compare == "0 (0)\n" ? true : compare
   end
 
 end
