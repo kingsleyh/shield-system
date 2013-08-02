@@ -14,6 +14,12 @@ tests and statuses.
 
      gem install shield-system
 
+Requires RMagick so imagemagick needs to be installed. on a mac with brew:
+
+     brew install git (if you don't have git)
+     brew install ghostscript
+     brew install imagemagick
+
 ## Usage
 
 ### Create build status preset shields
