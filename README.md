@@ -77,8 +77,13 @@ gem install shield-system
 
 ### Creating Sparklines
 
+![BarLabel]
+(https://raw.github.com/masterthought/shield-system/master/examples/images/build-history-label-bar.gif)
 ![Bar]
 (https://raw.github.com/masterthought/shield-system/master/examples/images/build-history-bar.gif)
+
+![PieLabel]
+(https://raw.github.com/masterthought/shield-system/master/examples/images/build-history-label-pie.gif)
 ![Pie]
 (https://raw.github.com/masterthought/shield-system/master/examples/images/build-history-pie.gif)
 
