@@ -20,14 +20,19 @@ gem install shield-system
 
 ![Passing]
 (https://raw.github.com/masterthought/shield-system/master/examples/images/passing.gif)
+
 ![Failing]
 (https://raw.github.com/masterthought/shield-system/master/examples/images/failing.gif)
+
 ![Pending]
 (https://raw.github.com/masterthought/shield-system/master/examples/images/pending.gif)
+
 ![Unstable]
 (https://raw.github.com/masterthought/shield-system/master/examples/images/unstable.gif)
+
 ![Error]
 (https://raw.github.com/masterthought/shield-system/master/examples/images/error.gif)
+
 ![Unknown]
 (https://raw.github.com/masterthought/shield-system/master/examples/images/unknown.gif)
 
@@ -42,8 +47,10 @@ gem install shield-system
 
 ![Acceptance]
 (https://raw.github.com/masterthought/shield-system/master/examples/images/acceptance.gif)
+
 ![Functional]
 (https://raw.github.com/masterthought/shield-system/master/examples/images/functional.gif)
+
 ![EndtoEnd]
 (https://raw.github.com/masterthought/shield-system/master/examples/images/end-to-end.gif)
 
@@ -61,6 +68,7 @@ gem install shield-system
 
 ![Height]
 (https://raw.github.com/masterthought/shield-system/master/examples/images/height.gif)
+
 ![Font]
 (https://raw.github.com/masterthought/shield-system/master/examples/images/font.gif)
 
