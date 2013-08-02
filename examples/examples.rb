@@ -33,12 +33,12 @@ generate(BuildStatus.unknown)
 @shield.github_shield('end-to-end','Number of End to End Tests:','500','#F08C4A','#F08C4A','#0C0861','#0C0861')
 
 # changing height and font
-@shield.github_shield('height','Dependencies','up-to-date',BuildStatus.key.colour,BuildStatus.passing.colour,BuildStatus.value.colour,'white',30,15,'arial',50)
-@shield.github_shield('font','GPA','4.0','#25B9E6',BuildStatus.passing.colour,'#0C0861','white',20,13,'times')
+@shield.github_shield('height','Dependencies','up-to-date',BuildStatus.key.colour,BuildStatus.passing.colour,BuildStatus.value.colour,'white','none',30,15,'arial',50)
+@shield.github_shield('font','GPA','4.0','#25B9E6',BuildStatus.passing.colour,'#0C0861','white','none',20,13,'times')
 
 # sparklines bar and pie
-@shield.github_shield('build-history-label-bar','Build History','','#A8A7A5','#A8A7A5','white','white',28,13)
-@shield.github_shield('build-history-label-pie','Passing Tests','','#A8A7A5','#A8A7A5','white','white',28,13)
+@shield.github_shield('build-history-label-bar','Build History','','#A8A7A5','#A8A7A5','white','white','none',28,13)
+@shield.github_shield('build-history-label-pie','Passing Tests','','#A8A7A5','#A8A7A5','white','white','none',28,13)
 @shield.sparkline_shield('build-history-bar',:bar,[100,100,90,80,90,90,100,120,120,90,80,70,100,120])
 @shield.sparkline_shield('build-history-pie',:pie,[70])
 

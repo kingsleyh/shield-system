@@ -2,7 +2,7 @@ require 'RMagick'
 
 class GithubShield
 
-  def initialize(shield_name, key_text, status_text, key_colour, status_colour, key_text_colour, status_text_colour, output_path, height, font_size, font_family, buffer)
+  def initialize(shield_name, key_text, status_text, key_colour, status_colour, key_text_colour, status_text_colour, background_colour, output_path, height, font_size, font_family, buffer)
     @shield_name = shield_name
     @key_text = "   #{key_text}"
     @status_text = "   #{status_text}"
@@ -10,6 +10,7 @@ class GithubShield
     @status_colour = status_colour
     @key_text_colour = key_text_colour
     @status_text_colour = status_text_colour
+    $background_colour = background_colour
     @output_path = output_path
     @font_size = font_size.to_i
     @font_family = font_family
@@ -18,7 +19,8 @@ class GithubShield
     @status_width = get_text_width(@status_text)
     @width = @key_width + @status_width
     @height = height.to_i
-    @canvas = Magick::Image.new(@width, @height)
+    @canvas = Magick::Image.new(@width, @height){ self.background_color = $background_colour }
+    @canvas.alpha(Magick::ActivateAlphaChannel)
     @draw = Magick::Draw.new
     @corners = 3
   end
@@ -84,7 +86,8 @@ class GithubShield
   end
 
   def get_text_width(text)
-    canvas = Magick::Image.new(100, 100)
+    canvas = Magick::Image.new(100, 100){ self.background_color = 'transparent' }
+    canvas.alpha(Magick::ActivateAlphaChannel)
     label = Magick::Draw.new
     label.font_family(@font_family)
     label.font_size(@font_size)
