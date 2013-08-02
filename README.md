@@ -12,7 +12,7 @@ tests and statuses.
 
 ## Install
 
-gem install shield-system
+     gem install shield-system
 
 ## Usage
 
@@ -36,8 +36,8 @@ gem install shield-system
 ![Unknown]
 (https://raw.github.com/masterthought/shield-system/master/examples/images/unknown.gif)
 
-     require 'shield-system'
-     require 'shield-system/presets/github_build_status'
+     require 'shield_system'
+     require 'presets/github_build_status.rb'
 
      output_path = File.dirname(__FILE__)
      build_status = GithubBuildStatus.new(output_path)
@@ -56,7 +56,7 @@ gem install shield-system
 
 ### using a custom shield
 
-     require 'shield-system'
+     require 'shield_system'
 
      output_path = File.dirname(__FILE__)
      shield = ShieldSystem.new(output_path)

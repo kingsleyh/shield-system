@@ -1,4 +1,4 @@
-require File.dirname(__FILE__) + '/../presets/github_build_status'
+require File.dirname(__FILE__) + '/../src/presets/github_build_status'
 
 output_path = File.dirname(__FILE__) + '/images'
 
