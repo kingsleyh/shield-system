@@ -1,5 +1,6 @@
 require 'rspec'
 require File.dirname(__FILE__) + '/../presets/github_build_status'
+require File.dirname(__FILE__) + '/spec_helper'
 
 describe 'GithubBuildStatus' do
 
@@ -40,10 +41,13 @@ describe 'GithubBuildStatus' do
 
 
   def generate(status)
-    @build_status.shield(status,true)
+    @build_status.shield(status, true)
   end
 
   def assert_file_exists?(name)
-    File.exists?(@output_path + "/#{name}.gif").should be_true
+    actual = @output_path + "/#{name}.gif"
+    File.exists?(actual).should be_true
+    expected = File.dirname(__FILE__)+"/../../examples/images/#{name}.gif"
+    VerifyImage.is_same(actual, expected).should be_true
   end
 end

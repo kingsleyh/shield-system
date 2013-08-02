@@ -1,6 +1,7 @@
 require 'rspec'
 require File.dirname(__FILE__) + '/../shield_system'
 require File.dirname(__FILE__) + '/../presets/helpers/build_status'
+require File.dirname(__FILE__) + '/spec_helper'
 
 describe 'ShieldSystem' do
 
@@ -40,6 +41,9 @@ describe 'ShieldSystem' do
   end
 
   def assert_file_exists?(name)
-    File.exists?(@output_path + "/#{name}.gif").should be_true
+    actual = @output_path + "/#{name}.gif"
+    File.exists?(actual).should be_true
+    expected = File.dirname(__FILE__)+"/../../examples/images/#{name}.gif"
+    VerifyImage.is_same(actual,expected).should be_true
   end
 end
