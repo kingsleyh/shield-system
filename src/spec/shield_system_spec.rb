@@ -40,10 +40,4 @@ describe 'ShieldSystem' do
     assert_file_exists?(name)
   end
 
-  def assert_file_exists?(name)
-    actual = @output_path + "/#{name}.gif"
-    File.exists?(actual).should == true
-    expected = File.dirname(__FILE__)+"/../../examples/images/#{name}.gif"
-    VerifyImage.is_same(actual,expected).should == true
-  end
 end
