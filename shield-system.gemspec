@@ -1,15 +1,16 @@
 Gem::Specification.new do |s|
   s.name = 'shield-system'
-  s.version = '0.0.2'
+  s.version = '0.0.3'
   s.authors = ['Kingsley Hendrickse']
-  s.date = '2013-08-02'
+  s.date = '2013-08-06'
   s.description = 'Create status badge images for use on github pages etc'
   s.email = 'kingsley@masterthought.net'
   s.extra_rdoc_files = [
       'README.md'
   ]
   s.files = [
-      'src/shield_system.rb', 'src/systems/github_shield.rb', 'src/systems/sparkline_shield.rb', 'src/presets/helpers/build_status.rb', 'src/presets/github_build_status.rb'
+      'src/shield_system.rb', 'src/constants.rb', 'src/systems/github_shield.rb', 'src/systems/sparkline_shield.rb', 'src/presets/helpers/build_status.rb', 'src/presets/github_build_status.rb',
+      'src/fonts/bureaueaglebook.ttf','src/systems/label.rb'
   ]
   s.require_paths = ['src']
   s.homepage = 'https://github.com/masterthought/shield-system'
