@@ -12,19 +12,19 @@ describe 'ShieldSystem' do
 
   it 'should generate a github style status badge' do
     name = 'acceptance'
-    @shield.github_shield(name, 'Acceptance Tests', BuildStatus.passing.name, '#25B9E6', BuildStatus.passing.colour, '#0C0861', 'white')
+    @shield.github_shield(name, 'Acceptance Tests', BuildStatus.passing.name, '#25B9E6', BuildStatus.passing.colour, '#0C0861', 'white',TRANSPARENT_BACKGROUND, FONT_EAGLE)
     assert_file_exists?(name)
   end
 
   it 'should generate a github style status badge with custom height' do
     name = 'height'
-    @shield.github_shield(name, 'Dependencies', 'up-to-date', BuildStatus.key.colour, BuildStatus.passing.colour, BuildStatus.value.colour, 'white', 'none', 30, 15, 'arial', 50)
+    @shield.github_shield(name, 'Dependencies', 'up-to-date', BuildStatus.key.colour, BuildStatus.passing.colour, BuildStatus.value.colour, 'white', TRANSPARENT_BACKGROUND, FONT_EAGLE, 30, 15, 'arial')
     assert_file_exists?(name)
   end
 
   it 'should generate a github style status badge with custom font' do
     name = 'font'
-    @shield.github_shield(name, 'GPA', '4.0', '#25B9E6', BuildStatus.passing.colour, '#0C0861', 'white', 'none', 20, 13, 'times')
+    @shield.github_shield(name, 'GPA', '4.0', '#25B9E6', BuildStatus.passing.colour, '#0C0861', 'white', TRANSPARENT_BACKGROUND, FONT_EAGLE, 20, 13, 'times')
     assert_file_exists?(name)
   end
 

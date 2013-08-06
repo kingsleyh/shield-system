@@ -6,7 +6,7 @@ describe 'GithubBuildStatus' do
 
   before :each do
     @output_path = File.dirname(__FILE__) + '/images'
-    @build_status = GithubBuildStatus.new(@output_path)
+    @build_status = GithubBuildStatus.new(@output_path,TRANSPARENT_BACKGROUND,FONT_EAGLE)
   end
 
   it 'should generate a github style status badge (passing)' do

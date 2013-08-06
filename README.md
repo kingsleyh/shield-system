@@ -78,8 +78,8 @@ Requires RMagick so imagemagick needs to be installed. on a mac with brew:
 ![Font]
 (https://raw.github.com/masterthought/shield-system/master/examples/images/font.gif)
 
-     shield.github_shield('height','Dependencies','up-to-date',BuildStatus.key.colour,BuildStatus.passing.colour,BuildStatus.value.colour,'white','none',30,15,'arial',50)
-     shield.github_shield('font','GPA','4.0','#25B9E6',BuildStatus.passing.colour,'#0C0861','white','none',20,13,'times')
+     shield.github_shield('height','Dependencies','up-to-date',BuildStatus.key.colour,BuildStatus.passing.colour,BuildStatus.value.colour,'white',TRANSPARENT_BACKGROUND,FONT_EAGLE,30,15,'arial')
+     shield.github_shield('font','GPA','4.0','#25B9E6',BuildStatus.passing.colour,'#0C0861','white',TRANSPARENT_BACKGROUND,FONT_EAGLE,20,13,'times')
 
 ### Creating Sparklines
 
@@ -96,23 +96,24 @@ Requires RMagick so imagemagick needs to be installed. on a mac with brew:
 ### sparklines bar and pie
 
      # labels
-     shield.github_shield('build-history-label-bar','Build History','','#A8A7A5','#A8A7A5','white','white','none',28,13)
-     shield.github_shield('build-history-label-pie','Passing Tests','','#A8A7A5','#A8A7A5','white','white','none',28,13)
+     shield.label('build-history-label-bar', 'Build History', '#A8A7A5', 'white', TRANSPARENT_BACKGROUND, FONT_EAGLE, 28, 13)
+     shield.label('build-history-label-pie', 'Passing Tests', '#A8A7A5', 'white', TRANSPARENT_BACKGROUND, FONT_EAGLE, 28, 13)
      # sparklines
-     shield.sparkline_shield('build-history-bar',:bar,[100,100,90,80,90,90,100,120,120,90,80,70,100,120])
-     shield.sparkline_shield('build-history-pie',:pie,[70])
+     shield.sparkline_shield('build-history-bar', :bar, [100, 100, 90, 80, 90, 90, 100, 120, 120, 90, 80, 70, 100, 120])
+     shield.sparkline_shield('build-history-pie', :pie, [70])
 
 ## Additional Info
 
 github_shield takes several configuration parameters:
 
-   github_shield(shield_name, key_text, status_text, key_colour, status_colour, key_text_colour, status_text_colour, background_colour='none', height=18, font_size=11, font_family='arial', buffer=5)
+   github_shield(shield_name, key_text, status_text, key_colour, status_colour, key_text_colour, status_text_colour, background_colour=TRANSPARENT_BACKGROUND, custom_font=FONT_EAGLE, height=18, font_size=11, font_family='arial', buffer=5)
 
 most are self explanatory but here's some clarification on the last ones:
 
-  * background_colour = by default is 'none' but you can use this to set a specific colour
-  * buffer = by default is 5 - this is width added to the text width for the key and value you supply. The calculation for text width doesn't seem to take into account the font used so
-    when changing the font size the text doesn't line up correctly - you can increase the buffer to fix this if that happens.
+  * background_colour = by default is TRANSPARENT_BACKGROUND but you can use this to set a specific colour
+  * buffer = by default is 5 - this is width added to the text width for the key and value you supply. you can increase the buffer to make more background space to the right of the text.
+  * custom_font = this is set to FONT_EAGLE by default. When custom_font is set it ignores font_family. You can turn off custom_font by setting it to NO_CUSTOM_FONT then the font_family will work.
+    (custom font is better cross platform otherwise the tests were failing as different OS's render the system fonts differently)
 
 ## Develop
 

@@ -3,9 +3,10 @@ require File.dirname(__FILE__) + '/../presets/helpers/build_status'
 
 class GithubBuildStatus
 
-  def initialize(output_path,background_colour='none')
+  def initialize(output_path,background_colour=TRANSPARENT_BACKGROUND,custom_font=NO_CUSTOM_FONT)
     @shield = ShieldSystem.new(output_path)
     @background_colour = background_colour
+    @custom_font = custom_font
   end
 
   def passing
@@ -34,7 +35,7 @@ class GithubBuildStatus
 
   def shield(status, override_filename=false)
     @shield.github_shield(override_filename ? status.name.downcase : BuildStatus.filename, BuildStatus.key.name, status.name,
-                          BuildStatus.key.colour, status.colour, BuildStatus.value.colour, BuildStatus.value.colour, @background_colour)
+                          BuildStatus.key.colour, status.colour, BuildStatus.value.colour, BuildStatus.value.colour, @background_colour, @custom_font)
   end
 
 end
