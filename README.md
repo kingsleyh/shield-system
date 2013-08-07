@@ -3,6 +3,7 @@
 Shield-System lets you generate github style status images for use anywhere e.g. custom badges with tests results.
 
 [![Build Status](https://travis-ci.org/masterthought/shield-system.png?branch=master)](https://travis-ci.org/masterthought/shield-system)
+[![shield-system Downloads](http://www.gemetric.me/images/shield-system.gif)](https://rubygems.org/gems/shield-system)
 
 ## Background
 
